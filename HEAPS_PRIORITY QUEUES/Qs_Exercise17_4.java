@@ -5,7 +5,7 @@
 // TC = O(nlogn)
 // Sc = O(n)
 
-import java.io.*;;
+import java.io.*;
 import java.util.*;
 
 public class Qs_Exercise17_4 {
