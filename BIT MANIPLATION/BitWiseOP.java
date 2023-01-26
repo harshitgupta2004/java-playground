@@ -100,19 +100,19 @@ public class BitWiseOP{
 
     // MODULAR EXPONENTIATION:
     public static int ModularExpo(int a, int n, int x) {
-        int ans = 1;
+        // int ans = 1;
 
-        while(n>0){
-            //If n is odd, multiple a with ans
-            if((n & 1) != 0){
-                ans = ans * a;
-            }
-            // n must be even now
-            n = n>>1; //n = n/2
-            a = a*a; //change a to a^2
-        }
+        // while(n>0){
+        //     //If n is odd, multiple a with ans
+        //     if((n & 1) != 0){
+        //         ans = ans * a;
+        //     }
+        //     // n must be even now
+        //     n = n>>1; //n = n/2
+        //     a = a*a; //change a to a^2
+        // }
 
-        return ans % x;
+        // return ans % x;
 
         // Efficient Approach
         int ans = 1;

@@ -3,26 +3,26 @@
 
 // TC = O(n)
 // SC = O(1)
+class Node {
+    int data;
+    Node left, right;
+
+    public Node(int item) {
+        data = item;
+        left = right = null;
+    }
+}
+
+class Res {
+    public int val;
+}
 
 public class Qs_Exercise15_5 {
-    class Node {
-        int data;
-        Node left, right;
-
-        public Node (int item) {
-            data = item;
-            left = right = null;
-        }
-    }
-
-    class Res {
-        public int val;
-    }
 
     Node root;
 
     int findMaxUtil(Node node, Res res) {
-        if(node == null) {
+        if (node == null) {
             return 0;
         }
 
@@ -31,7 +31,7 @@ public class Qs_Exercise15_5 {
 
         int max_single = Math.max(Math.max(l, r) + node.data, node.data);
 
-        int max_top = Math.max(max_single, l+r+node.data);
+        int max_top = Math.max(max_single, l + r + node.data);
 
         res.val = Math.max(res.val, max_top);
         return max_single;
@@ -45,11 +45,11 @@ public class Qs_Exercise15_5 {
         Res res = new Res();
         res.val = Integer.MIN_VALUE;
 
-        findMaxUtil(node, res);
+        return findMaxUtil(node, res);
     }
 
     public static void main(String args[]) {
-        Solution tree = new Solution();
+        Qs_Exercise15_5 tree = new Qs_Exercise15_5();
         tree.root = new Node(10);
         tree.root.left = new Node(2);
         tree.root.right = new Node(10);

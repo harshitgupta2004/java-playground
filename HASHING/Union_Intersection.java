@@ -36,7 +36,6 @@ public class Union_Intersection {
             if(set.contains(arr2[i])){
                 count++;
                 set.remove(arr2[i]);
-                set.g
             }
         }
 

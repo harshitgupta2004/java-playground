@@ -22,7 +22,7 @@ public class OOPS{
 // ACCESS MODIFIERS/SPECIFIERS
 class BankAccount {
     public String username; //username can/ should be visible to anyone, so it is made public
-    private String password; //as password is sensitive data, so it should be made with private, so only it can be accesed within the class, and not outside
+    public String password; //as password is sensitive data, so it should be made with private, so only it can be accesed within the class, and not outside
     public void setPassword(String pwd) {
         password = pwd; //here, this is acessible as we are acessing this private thing wihtin the class or fxn
     }

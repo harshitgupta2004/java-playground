@@ -14,7 +14,7 @@ public class StaticKeyword {
 }
 
 class Student {
-    static int returnPercetage (int maths. int phy, int chem){ //in this, in paramters there wil be diff values, but the logic of this fxn will not change and remain same static for everyone, so we add static keyword
+    static int returnPercetage (int maths, int phy, int chem){ //in this, in paramters there wil be diff values, but the logic of this fxn will not change and remain same static for everyone, so we add static keyword
         return(maths+phy+chem)/3;
     }
     

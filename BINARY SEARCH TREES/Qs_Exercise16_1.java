@@ -4,7 +4,7 @@
 
 // TC = SC = O(n)
 
-import java.rmi.Remote;
+
 import java.util.*;
 public class Qs_Exercise16_1 {
     static class Node{
@@ -26,7 +26,7 @@ public class Qs_Exercise16_1 {
             return 0;
         }
 
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<Node>();
         q.add(root);
 
         while(q.isEmpty() == false) {
