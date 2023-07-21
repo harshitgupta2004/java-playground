@@ -9,6 +9,9 @@ public class FloodFillAlgo {
         if(sr < 0 || sc < 0 || sr >= image.length || sc >= image[0].length || vis[sr][sc] || image[sr][sc] != orgColor) {
             return;
         }
+
+        image[sr][sc] = color;
+        
         // left
         helper(image, sr, sc-1, color, vis, orgColor);
 
@@ -28,6 +31,14 @@ public class FloodFillAlgo {
         return image;
     }
 
+    public static void printImage(int image[][]) {
+        for (int i = 0; i < image.length; i++) {
+            for (int j = 0; j < image[0].length; j++) {
+                System.out.print(image[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         int image[][] = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
         int sr = 1;
@@ -35,5 +46,6 @@ public class FloodFillAlgo {
         int color = 2;
 
         floodFill(image, sr, sc, color);
+        printImage(image);
     }
 }
