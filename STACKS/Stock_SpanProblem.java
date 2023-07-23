@@ -15,7 +15,7 @@ public class Stock_SpanProblem {
             }
             // Now, after removing, the one at the top which we will peek will be our prev high
             if(s.isEmpty()) {
-                span[i] = span[i+1]; // for 100 element
+                span[i] = i+1; // for 100 element
             } else {
                 int prevHigh = s.peek();
                 span[i] = i - prevHigh;
@@ -30,7 +30,7 @@ public class Stock_SpanProblem {
         stockSpan(stocks, span);
 
         for(int i = 0; i < span.length; i++) {
-            System.out.println(span[i] + " ");
+            System.out.print(span[i] + " ");
         }
     }
 }
