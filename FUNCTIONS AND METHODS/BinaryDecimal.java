@@ -1,24 +1,24 @@
-// public class BinaryDecimal {
+public class BinaryDecimal {
 
-//     public static void binToDec (int binNum) {
-//         int myNum = binNum;
-//         int pow = 0;
-//         int decNum = 0;
+    public static void binToDec (int binNum) {
+        int myNum = binNum;
+        int pow = 0;
+        int decNum = 0;
 
-//         while (binNum > 0) {
-//             int lastDigit = binNum % 10;
-//             decNum = decNum + (lastDigit * (int)Math.pow(2, pow)); // as pow fxn only give double, so we have to type cast it into int
+        while (binNum > 0) {
+            int lastDigit = binNum % 10;
+            decNum = decNum + (lastDigit * (int)Math.pow(2, pow)); // as pow fxn only give double, so we have to type cast it into int
 
-//             pow++;
-//             binNum = binNum/10;
-//         }
+            pow++;
+            binNum = binNum/10;
+        }
 
-//         System.out.println("Decimal of " + myNum + " = " + decNum);
-//     }
-//     public static void main (String args[]) {
-//         binToDec(10110);
-//     }
-// }
+        System.out.println("Decimal of " + myNum + " = " + decNum);
+    }
+    public static void main (String args[]) {
+        binToDec(10110);
+    }
+}
 
 
 // DECIMAL TO BINARY

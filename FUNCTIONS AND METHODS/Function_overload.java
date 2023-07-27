@@ -27,7 +27,7 @@
 //     }
 
 //     // fxn to calc float sum
-//     public static float sum (Float a, Float b) {
+//     public static float sum (float a, float b) {
 //         return a + b;
 //     }
 //     public static void main (String args []) {
@@ -51,7 +51,7 @@
 
 //         // boolean isPrime = true; OR method
     
-//         for (int i = 2; i <= n-1; i++){
+//         for (int i = 2; i < n; i++){
 //             if (n % i == 0) { // completely dividing
 //                 // isPrime = false;
 //                 // break;
@@ -113,7 +113,7 @@ public class Function_overload {
     }
 
     public static void primesInRange (int n){
-        for (int i =2; i <= n; i++){
+        for (int i = 2; i <= n; i++){
             if (isPrime(i)) { //true
                 System.out.print(i + " ");
             }
