@@ -22,7 +22,7 @@ public class Type_promotion {
         // System.out.println(ans);
 
         byte b = 5;
-        byte a = b * 2; // it will give error as it is an expression, and so, byte b got converted into int, 
+        byte a = b*2; // it will give error as it is an expression, and so, byte b got converted into int, 
         //so this b is an int, so it cannot convert into byte a, for that we have to do type casting.
         
         // byte a = (byte) (b * 2); this is correct method
