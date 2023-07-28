@@ -52,7 +52,7 @@ class Student {
         }
     }
 
-    // Parameterized Constructor
+    // Non - Parameterized Constructor
     Student() {
         marks = new int[3];
         System.out.println("Constructor is called");
@@ -61,7 +61,7 @@ class Student {
     // If we remove the above constructor, then 3rd line will give the error
     // Java automatically creates a constructor only when we have not created any other constructor
 
-    // Non-Parameterized Constructor
+    // Parameterized Constructor
     Student(String name) {
         marks = new int[3];
         this.name = name;
