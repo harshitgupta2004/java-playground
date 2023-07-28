@@ -27,7 +27,7 @@ class Pen {
     
     // Setters
     void setColor(String newColor){ //color is set
-        this.color = newColor; //jiss bhi onject me call kiya hai uska color
+        this.color = newColor; //jiss bhi object me call kiya hai uska color
     }
 
     void setTip(int newTip){ //tip is set
