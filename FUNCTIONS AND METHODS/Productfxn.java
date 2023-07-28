@@ -23,7 +23,7 @@
 //         int f = 1;
 
 //         for (int i = 1; i <=n; i++) {
-//             f = f * i;
+//             f *= i;
 //         }
 //         return f;
 //     }
@@ -46,7 +46,7 @@ public class Productfxn {
         int f = 1;
 
         for (int i = 1; i <=n; i++) {
-            f = f * i;
+            f *= i;
         }
         return f; // factorial of n
     }
