@@ -59,7 +59,7 @@ public class SortingAlgos {
             }
             // swap
             int temp = arr[minPos];
-            arr[minPos] = arr[i]; // agr 0th index keliye comparison ho rha hai to hum 1st smallest dhundh rhe hain; jaise 1th position me liye comparison ho rha hai to mtlb 2nd smallest dhundna cha rhe hain
+            arr[minPos] = arr[i]; // agr 0th index keliye comparison ho rha hai to hum 1st smallest dhundh rhe hain; jaise 1th position ke liye comparison ho rha hai to mtlb 2nd smallest dhundna cha rhe hain
             arr[i] = temp;
         }
     }
