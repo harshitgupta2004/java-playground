@@ -39,16 +39,13 @@
 //         System.out.print(digits[lastDigit]+" ");
 //     }
 //     public static void main(String args[]) {
-        
 //         printDigits(1947);
-//         System.out.println();
-
 //     }
 // }
 
 
 
-// 3. Find Length of a String usinf Recursion
+// 3. Find Length of a String using Recursion
 // public class Qs_Exercise9 {
 
 //     public static int lenString(String str) {
@@ -66,7 +63,7 @@
 
 
 
-// 4. We are given a stringS,we need to find the count of all contiguous substrings starting and ending with the same character
+// 4. We are given a string S,we need to find the count of all contiguous substrings starting and ending with the same character
 public class Qs_Exercise9 {
 
     public static int countSubStrs(String str, int i, int j, int n) {

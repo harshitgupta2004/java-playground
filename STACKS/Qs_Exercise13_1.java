@@ -10,9 +10,9 @@ public class Qs_Exercise13_1 {
 
     static class Node {
         int data;
-        Node ptr;
+        Node next;
         Node(int d){
-            ptr = null;
+            next = null;
             data = d;
         }
     }
@@ -25,7 +25,7 @@ public class Qs_Exercise13_1 {
 
         while(slow != null) {
             s.push(slow.data);
-            slow = slow.ptr;
+            slow = slow.next;
         }
 
         while(head != null) {
@@ -36,7 +36,7 @@ public class Qs_Exercise13_1 {
                 ispalin = false;
                 break;
             }
-            head = head.ptr;
+            head = head.next;
         }
         return ispalin;
     }
@@ -48,12 +48,12 @@ public class Qs_Exercise13_1 {
         Node five = new Node(3);
         Node six = new Node(2);
         Node seven = new Node(1);
-        one.ptr = two;
-        two.ptr = three;
-        three.ptr = four;
-        four.ptr = five;
-        five.ptr = six;
-        six.ptr = seven;
+        one.next = two;
+        two.next = three;
+        three.next = four;
+        four.next = five;
+        five.next = six;
+        six.next = seven;
         
         boolean condition = isPalindrome(one);
         System.out.println("Palindrome : " + condition);

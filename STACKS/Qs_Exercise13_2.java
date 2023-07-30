@@ -13,14 +13,14 @@ public class Qs_Exercise13_2 {
         Stack<String> s = new Stack<>();
         String res = "";
         res += "/";
-        int len_A = A.length();
+        int len = A.length();
 
-        for(int i = 0; i < len_A; i++) {
+        for(int i = 0; i < len; i++) {
             String dir = "";
-            while(i < len_A && A.charAt(i) == '/') {
+            while(i < len && A.charAt(i) == '/') {
                 i++;
             }
-            while(i < len_A && A.charAt(i) != '/') {
+            while(i < len && A.charAt(i) != '/') {
                 dir += A.charAt(i);
                 i++;
             }

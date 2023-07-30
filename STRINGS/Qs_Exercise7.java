@@ -3,9 +3,8 @@ import java.util.Scanner;
 
 // STRINGS
 public class Qs_Exercise7 {
-
-    //Count how many times lowercase vowels occurred in a String entered by the user
     public static void main(String args[]) {
+        //Count how many times lowercase vowels occurred in a String entered by the user
         // Scanner sc = new Scanner(System.in);
         // String lowercase = sc.nextLine();
         // OR USE BELOW 
