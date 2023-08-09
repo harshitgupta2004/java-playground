@@ -1,4 +1,4 @@
-public class LinkedList {
+public class ZigZag_LL {
 
     public static class Node {
         int data;
@@ -13,7 +13,7 @@ public class LinkedList {
     public static Node tail;
     public static int size;
 
-    public void print() {
+    public static void print() {
         if(head == null) {
             System.out.println("LL is empty");
             return;
@@ -26,7 +26,7 @@ public class LinkedList {
         System.out.println("null");
     }
 
-    public void addLast (int data) {
+    public static void addLast (int data) {
         Node newNode = new Node(data);
         size++;
         if(head == null){
@@ -37,7 +37,7 @@ public class LinkedList {
         tail = newNode;
     }
 
-    public void zigZag() {
+    public static void zigZag() {
         // Find Mid
         Node slow  = head;
         Node fast = head.next;
@@ -87,7 +87,7 @@ public class LinkedList {
         ll.addLast(5);
 
         ll.print();
-        ll.zigZag();
+        zigZag();
         ll.print();
     }
 }
