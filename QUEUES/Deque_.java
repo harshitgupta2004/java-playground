@@ -1,8 +1,9 @@
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Deque_ {
     public static void main(String args[]) {
-        Deque<Integer> deque = new LinkedList<>();
+        Deque<Integer> deque = new ArrayDeque<>();
         deque.addFirst(1); // 1
         deque.addFirst(2); // 2 1
         deque.addLast(3); // 2 1 3
