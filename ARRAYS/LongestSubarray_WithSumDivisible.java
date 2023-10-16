@@ -8,7 +8,7 @@ public class LongestSubarray_WithSumDivisible {
             int sum = 0;
             for(int j = i; j < n; j++){
                 sum += arr[j];
-                if(sum % 3 == 0){
+                if(sum % k == 0){
                     maxL = Math.max(maxL, j-i+1);
                 }
             }
