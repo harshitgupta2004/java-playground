@@ -15,14 +15,8 @@ public class BinaryDecimal {
 
         System.out.println("Decimal of " + myNum + " = " + decNum);
     }
-    public static void main (String args[]) {
-        binToDec(10110);
-    }
-}
 
-
-// DECIMAL TO BINARY
-public class BinaryDecimal {
+    // DECIMAL TO BINARY
 
     public static void decToBin (int n) {
         int myNum = n;
@@ -40,6 +34,7 @@ public class BinaryDecimal {
         System.out.println("Binary of " + myNum + " = " + binNum);
     }
     public static void main (String args[]) {
+        binToDec(10110);
         decToBin(15);
     }
 }
