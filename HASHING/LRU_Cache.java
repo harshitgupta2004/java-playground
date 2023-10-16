@@ -1,3 +1,5 @@
+// TC = O(1); SC = O(n), we need to store n elements in the cache
+
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -7,13 +9,13 @@ public class LRU_Cache {
     Set<Integer> cache;
     int capacity;
 
-    public LRU_Cache (int capacity){
+    public LRU_Cache(int capacity) {
         this.cache = new LinkedHashSet<Integer>(capacity);
         this.capacity = capacity;
     }
 
     public boolean get(int key) {
-        if(! cache.contains(key)){
+        if (!cache.contains(key)) {
             return false;
         }
         cache.remove(key);
@@ -22,7 +24,7 @@ public class LRU_Cache {
     }
 
     public void refer(int key) {
-        if(get(key) ==  false){
+        if (get(key) == false) {
             put(key);
         }
     }
@@ -32,13 +34,13 @@ public class LRU_Cache {
 
         Iterator<Integer> itr = list.descendingIterator();
 
-        while(itr.hasNext()){
-            System.out.println(itr.next()+" ");
+        while (itr.hasNext()) {
+            System.out.println(itr.next() + " ");
         }
     }
 
     public void put(int key) {
-        if(cache.size() == capacity){
+        if (cache.size() == capacity) {
             int firstKey = cache.iterator().next();
             cache.remove(firstKey);
         }
