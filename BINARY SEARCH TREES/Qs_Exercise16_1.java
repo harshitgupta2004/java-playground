@@ -6,6 +6,7 @@
 
 
 import java.util.*;
+import java.util.LinkedList;
 public class Qs_Exercise16_1 {
     static class Node{
         int val;
@@ -26,7 +27,7 @@ public class Qs_Exercise16_1 {
             return 0;
         }
 
-        Queue<Node> q = new LinkedList<Node>();
+        Queue<Node> q = new LinkedList<>();
         q.add(root);
 
         while(q.isEmpty() == false) {
