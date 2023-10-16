@@ -56,7 +56,7 @@ public class Qs_Exercise15_2 {
     }
 
     public static void main(String args[]) {
-        BinaryTree tree = new BinaryTree();
+        Qs_Exercise15_2 tree = new Qs_Exercise15_2();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
