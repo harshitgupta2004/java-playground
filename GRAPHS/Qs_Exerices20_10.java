@@ -15,13 +15,14 @@ public class Qs_Exerices20_10 {
             if (matrix[x][y] == 1){
                 hasCornerCell = true;
             }
+        }
         
         visited[x][y] = true;
         
         dfs(matrix, visited, x+1, y, n, m,hasCornerCell);
         dfs(matrix, visited, x, y+1, n, m, hasCornerCell);
         dfs(matrix, visited, x-1, y, n, m,hasCornerCell);
-        dfs(matrix, visited, x, y-1, n, m, hasCornerCell);
+        dfs(matrix, visited, x, y-1, n, m,hasCornerCell);
     }
 
     static int countClosedIsland(int matrix[][], int n, int m){
