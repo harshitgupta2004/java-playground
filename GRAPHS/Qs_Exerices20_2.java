@@ -5,6 +5,7 @@
 // TC = O(n); SC = O(1)
 
 import java.util.*;
+import java.util.LinkedList;
 public class Qs_Exerices20_2 {
     static class Node {
         int data;
