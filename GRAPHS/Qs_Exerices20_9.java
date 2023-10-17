@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.*;
 
 // Alien Dictionary
@@ -47,7 +48,7 @@ public class Qs_Exerices20_9 {
             }
         }
 
-        LinkedList<Character> q = new LinkedList<>();
+        LinkedList<Character> q = new LinkedList();
         for (char c : degree.keySet()) {
             if(degree.get(c) == 0) {
                 q.add(c);
