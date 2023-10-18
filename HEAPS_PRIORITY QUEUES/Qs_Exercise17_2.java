@@ -5,6 +5,7 @@
 
 // TC = SC = O(n)
 
+import java.util.LinkedList;
 import java.io.*;
 import java.util.*;
 
