@@ -1,4 +1,4 @@
-public class ion{
+public class CommonPrefix{
     public static int commonPrefix(String input) {
         int n = input.length();
         if(n == 0) return 0;
