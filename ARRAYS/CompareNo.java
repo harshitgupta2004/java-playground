@@ -15,7 +15,7 @@ public class CompareNo {
         }
 
         String s = "";
-        Collections.sort(a, new Comparator<String>(){
+        Collections.sort(a, new Comparator<String>() {
             @Override
             public int compare (String s, String s1){
                 for(int i = 0; i < s.length() && i < s1.length(); i++){
@@ -26,7 +26,7 @@ public class CompareNo {
                 }
                 s += s.length() > s1.length() ? s1+s : s+s1;
             }
-        });
+        }}, null);
         
         return s;
     }
