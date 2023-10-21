@@ -1,3 +1,5 @@
+// Arrange given numbers to form the biggest number
+
 import java.util.*;
 
 public class CompareNo {
@@ -14,20 +16,20 @@ public class CompareNo {
             a[i] = String.valueOf(arr[i]);
         }
 
-        String s = "";
-        Collections.sort(a, new Comparator<String>() {
+        Arrays.sort(a, new Comparator<String>() {
             @Override
-            public int compare (String s, String s1){
-                for(int i = 0; i < s.length() && i < s1.length(); i++){
-                if(s.charAt(i) > s1.charAt(i)){
-                    s += s+s1;
-                }else if(s.charAt(i) < s1.charAt(i)){
-                    s += s1+s;
-                }
-                s += s.length() > s1.length() ? s1+s : s+s1;
+            public int compare(String s, String s1) {
+                String order1 = s + s1;
+                String order2 = s1 + s;
+                return order2.compareTo(order1);
             }
-        }}, null);
-        
-        return s;
+        });
+
+        StringBuilder sb = new StringBuilder();
+        for (String s : a) {
+            sb.append(s);
+        }
+
+        return sb.toString();
     }
 }
