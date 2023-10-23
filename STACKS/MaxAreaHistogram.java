@@ -10,11 +10,12 @@ public class MaxAreaHistogram {
         // Next Smaller Right
         Stack<Integer> s = new Stack<>();
 
-        for(int i = arr.length-1; i >= 0; i--){
-            while(!s.isEmpty() && arr[s.peek()] >= arr[i]) { // at s.peek there is index, and we have to get the number stored at index by arr
+        for (int i = arr.length - 1; i >= 0; i--) {
+            while (!s.isEmpty() && arr[s.peek()] >= arr[i]) { // at s.peek there is index, and we have to get the number
+                                                              // stored at index by arr
                 s.pop();
-            } 
-            if(s.isEmpty()){
+            }
+            if (s.isEmpty()) {
                 nsr[i] = arr.length;
             } else {
                 nsr[i] = s.peek(); // equals the top
@@ -25,11 +26,12 @@ public class MaxAreaHistogram {
         // Next Smaller Left
         s = new Stack<>(); // we just emptied the stack here
 
-        for(int i = 0; i < arr.length; i++){
-            while(!s.isEmpty() && arr[s.peek()] >= arr[i]) { // at s.peek there is index, and we have to get the number stored at index by arr
+        for (int i = 0; i < arr.length; i++) {
+            while (!s.isEmpty() && arr[s.peek()] >= arr[i]) { // at s.peek there is index, and we have to get the number
+                                                              // stored at index by arr
                 s.pop();
-            } 
-            if(s.isEmpty()){
+            }
+            if (s.isEmpty()) {
                 nsl[i] = -1;
             } else {
                 nsl[i] = s.peek();
@@ -38,7 +40,7 @@ public class MaxAreaHistogram {
         }
 
         // Current Area : width = j-i-1
-        for(int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int height = arr[i];
             int width = nsr[i] - nsl[i] - 1;
             int currArea = height * width;
@@ -49,7 +51,7 @@ public class MaxAreaHistogram {
     }
 
     public static void main(String args[]) {
-        int arr[] = {2, 1, 5, 6, 2, 3}; // hts in histogram
+        int arr[] = { 2, 1, 5, 6, 2, 3 }; // hts in histogram
         maxArea(arr);
     }
 }
