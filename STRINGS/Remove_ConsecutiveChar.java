@@ -7,8 +7,8 @@ public class Remove_ConsecutiveChar {
 
         StringBuilder sb = new StringBuilder(s);
 
-        for(int i = sb.length()-1; i > 0; i--){
-            if(s.charAt(i) == s.charAt(i-1)){
+        for (int i = sb.length() - 1; i > 0; i--) {
+            if (s.charAt(i) == s.charAt(i - 1)) {
                 sb.deleteCharAt(i);
             }
         }
