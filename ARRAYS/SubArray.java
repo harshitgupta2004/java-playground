@@ -22,8 +22,6 @@
 //     }
 // }
 
-
-
 // MAX SUBARRAY SUM
 // public class SubArray {
 //     public static void maxSubarraySum(int numbers[]){
@@ -53,8 +51,6 @@
 //     }
 // } //Time Complexity = n^3 ; brute approach 
 
-
-
 // MAX SUBARRAY SUM BY PREFIX APPROACH
 // prefix array - 
 // 0th index mtlb 0th se phele tk ka sum
@@ -75,9 +71,9 @@
 //             int start = i;
 //             for (int j = i; j < numbers.length; j++){
 //                 int end = j;
-                
+
 //                 currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
-                
+
 //                 if (maxSum < currSum) {
 //                     maxSum = currSum;
 //                 }
@@ -91,15 +87,13 @@
 //     } 
 // } // Time Complexity - n^2
 
-
-
 // MAX SUBARRAY SUM - KADANE'S ALGORITHM
 public class SubArray {
-    public static void Kadane(int numbers[]){
+    public static void Kadane(int numbers[]) {
         int cs = 0;
         int ms = Integer.MIN_VALUE;
-        
-        for (int i = 0; i < numbers.length; i++){
+
+        for (int i = 0; i < numbers.length; i++) {
             cs = cs + numbers[i];
             if (cs < 0) {
                 cs = 0;
@@ -107,12 +101,13 @@ public class SubArray {
             ms = Math.max(cs, ms);
         }
 
-        System.out.println("Max Sum = " + ms); //max sum print
+        System.out.println("Max Sum = " + ms); // max sum print
     }
-    public static void main (String args[]) {
-        int numbers[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+
+    public static void main(String args[]) {
+        int numbers[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
         Kadane(numbers);
-    } 
+    }
 } // Time Complexity = n;
-// You can make one special condition where all elements are negative;
-// so, you have to take their lowest negative value in that case
+  // You can make one special condition where all elements are negative;
+  // so, you have to take their lowest negative value in that case
