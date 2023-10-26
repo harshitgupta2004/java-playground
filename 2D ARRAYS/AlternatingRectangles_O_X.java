@@ -3,7 +3,7 @@
 // TC = SC = O(nm) 
 
 public class AlternatingRectangles_O_X {
-    public static void fill0X (int m, int n){
+    public static void fill0X(int m, int n) {
         int startRow = 0;
         int startCol = 0;
         int endRow = m;
@@ -14,54 +14,55 @@ public class AlternatingRectangles_O_X {
         // Initialize the character to be stored in matrix[][]
         char x = 'X';
 
-        while(startRow < endRow && startCol < endCol){
-            //top boundary - here, row is fixed starting row, but col is moving from startcol to endcol
-            for(int j = startCol; j < endCol; j++){ //i is for row and j is for column
+        while (startRow < endRow && startCol < endCol) {
+            // top boundary - here, row is fixed starting row, but col is moving from
+            // startcol to endcol
+            for (int j = startCol; j < endCol; j++) { // i is for row and j is for column
                 matrix[startRow][j] = x;
             }
             startRow++;
-            
-            //right - here, col is fixed and row is changing
-            for(int i = startRow; i < endRow; i++){
-                matrix[i][endCol-1] = x;
+
+            // right - here, col is fixed and row is changing
+            for (int i = startRow; i < endRow; i++) {
+                matrix[i][endCol - 1] = x;
             }
             endCol--;
 
-            //bottom
-            if(startRow < endRow){
-                for(int j = endCol-1; j >= startCol; j--){
-                    matrix[endRow-1][j] = x;
+            // bottom
+            if (startRow < endRow) {
+                for (int j = endCol - 1; j >= startCol; j--) {
+                    matrix[endRow - 1][j] = x;
                 }
                 endRow--;
             }
-            
 
-            //left
-            if(startCol < endCol){
-                for(int i = endRow-1; i >= startRow; i--){
+            // left
+            if (startCol < endCol) {
+                for (int i = endRow - 1; i >= startRow; i--) {
                     matrix[i][startCol] = x;
                 }
                 startCol++;
             }
 
             // Flip character for next iteration
-            x = (x == '0') ? 'X' :'0';
+            x = (x == '0') ? 'X' : '0';
         }
 
-        for (int i = 0; i < r; i++){
-            for (int j = 0; j < c; j++){
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
     }
+
     public static void main(String[] args) {
         System.out.println("Output for m = 5, n = 6");
         fill0X(5, 6);
- 
+
         System.out.println("Output for m = 4, n = 4");
         fill0X(4, 4);
- 
+
         System.out.println("Output for m = 3, n = 4");
         fill0X(3, 4);
     }
